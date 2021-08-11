@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, arial, helvetica;
+}
+
+body {
+    background-image: url("./img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+nav {
+    max-width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 10px 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+nav .div_logo .logo {
+    max-height: 100px;
+    opacity: 0.1;
+    border-radius:100px;
+}
+
+nav .div_logo .logo:hover{
+    opacity: 1;
+    transition: 1s;
+    border-radius: 0px;
+}
+
+nav .menu ul li {
+    list-style: none;
+    display: inline-block;
+    padding-top: 20px;
+    margin: 0px 40px;
+    position: relative;
+}
+
+nav .menu ul li::after {
+    content: '';
+    height:3px;
+    width:0;
+    background:white;
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    transition:1s;
+}
+
+nav .menu ul li:hover::after {
+    width:100%;
+}
+
+.menu_button {
+    text-decoration: none;
+    color: rgb(65, 64, 64);
+    font-size: 25px;
+}
+
+.menu_button:hover {
+    color: white;
+    transition: 1s;
+}
+
+section {
+    position: relative;
+    top: 360px;
+    text-align: center;
+    padding: 10px 0px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.heading {
+    font-size: 30px;
+}
+
+.text {
+    font-size: 25px;
+    margin:10px 0px;
+    text-transform: capitalize;
+    color: #FCCD4A;
+    opacity: 0.3;
+}
+
+section .heading{
+    margin:10px 0px;
+    text-transform: capitalize;
+    color: rgb(240, 34, 34);
+    opacity: 0.3;
+}
+
+.heading:hover,
+.text:hover {
+
+    opacity:1;
+    transition: 0.5s;
+}
+
+section .mid_button {
+    margin-top:50px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+section .mid_button {
+    padding: 12px 0px;
+    width:200px;
+    height:50px;
+   text-decoration: none;
+   color:white;
+   border-radius: 50px;
+   background-color: transparent;
+   margin: auto; 
+   margin-top:20px;
+   cursor: pointer;
+}
+
+section .mid_button a {
+    text-decoration: none;
+    color: rgba(136, 135, 135, 0.966);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+span {
+    background-color:#3FE6DC;
+    height:100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.mid_button:hover span {
+    width: 100%;
+}
+.mid_button:hover {
+    border:none;
+}
+
+section .mid_button a:hover{
+    color: white;
+}
